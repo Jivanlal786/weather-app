@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <FrameLayout
+       android:id="@+id/frameLayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+          android:id="@+id/back_image"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="fitXY" />
+   </FrameLayout>
+
+   <AutoCompleteTextView
+       android:id="@+id/et_city_name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:completionThreshold="1"
+       android:gravity="center"
+       android:hint="Enter Your City"
+       android:paddingStart="16dp"
+       android:paddingEnd="16dp"
+       android:textAlignment="center"
+       android:textColor="@color/white"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/tv_temp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:text="0"
+       android:textColor="@color/white"
+       android:textSize="64sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintEnd_toStartOf="@+id/tv_degree"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintHorizontal_chainStyle="packed"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/et_city_name" />
+
+   <TextView
+       android:id="@+id/tv_feels"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:text="pressure"
+       android:textColor="@color/white"
+       android:textSize="24sp"
+       app:layout_constraintEnd_toStartOf="@+id/tv_degree2"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintHorizontal_chainStyle="packed"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/tv_temp" />
+
+   <TextView
+       android:id="@+id/tv_degree2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@android:color/transparent"
+       android:text="O"
+       android:textColor="@color/white"
+       app:layout_constraintEnd_toStartOf="@+id/textView3"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toEndOf="@+id/tv_feels"
+       app:layout_constraintTop_toTopOf="@+id/tv_feels" />
+
+   <TextView
+       android:id="@+id/textView3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="C"
+       android:textColor="@color/white"
+       android:textSize="24sp"
+       app:layout_constraintBottom_toBottomOf="@+id/tv_feels"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toEndOf="@+id/tv_degree2"
+       app:layout_constraintTop_toTopOf="@+id/tv_feels" />
+
+  <!-- <TextView
+       android:id="@+id/tv_country"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="8dp"
+       android:text="country"
+       android:textColor="@color/white"
+       android:textSize="30sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />-->
+
+   <TextView
+       android:id="@+id/tv_degree"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="8dp"
+       android:background="@android:color/transparent"
+       android:text="O"
+       android:textColor="@color/white"
+       app:layout_constraintEnd_toStartOf="@+id/textView2"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toEndOf="@+id/tv_temp"
+       app:layout_constraintTop_toTopOf="@+id/tv_temp" />
+
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="C"
+       android:textColor="@color/white"
+       android:textSize="64sp"
+       app:layout_constraintBottom_toBottomOf="@+id/tv_temp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toEndOf="@+id/tv_degree"
+       app:layout_constraintTop_toTopOf="@+id/tv_temp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
